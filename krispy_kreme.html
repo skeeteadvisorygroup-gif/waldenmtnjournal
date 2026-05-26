@@ -1,43 +1,50 @@
-  <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Some Krispy Kreme Customers Could Receive Compensation After Data Breach</title>
 <style>
-body { font-family: Arial, sans-serif; margin: 0; background:#f5f5f5; }
-header, footer { background:#1a1a1a; color:#fff; padding:15px; }
+body { font-family: Arial, sans-serif; margin: 0; background: #f5f5f5; }
+header, footer { background: #1a1a1a; color: #fff; padding: 15px; }
 header .brand { display: flex; align-items: center; gap: 18px; }
-header img.logo { height:44px; width:auto; border-radius:6px; background:#fff; }
-nav a { color:#fff; margin-right:15px; text-decoration:none; font-size:14px; }
-.container { display:flex; flex-wrap:wrap; max-width:1100px; margin:auto; background:#fff; }
-.main { flex:3; padding:20px; }
-.sidebar { flex:1; padding:20px; background:#fafafa; }
-.img { background:#ddd; display:flex; align-items:center; justify-content:center; margin:15px 0; }
-.img span { font-size:12px; color:#555; }
-.hero { height:300px; background-size:cover; background-position:center; overflow:hidden; }
-.thumb { height:150px; background-size:cover; background-position:center; overflow:hidden; }
-.ad { height:400px; background-size:contain; background-position:center; background-repeat:no-repeat; overflow:hidden; display:flex; align-items:center; justify-content:center; }
-.sidebar-square { height:300px; background-size:cover; background-position:center; overflow:hidden; }
-.sidebar-tall { height:450px; background-size:cover; background-position:center; overflow:hidden; }
-h1 { font-size:28px; }
-h2 { font-size:28px; }
-h3 { font-size:20px; margin-top:30px; }
-.meta { color:#777; font-size:14px; margin-bottom:10px; }
-.section { margin-top:30px; }
-.tile { display:flex; gap:10px; margin-bottom:15px; }
-.tile .img { width:120px; height:80px; flex-shrink:0; }
-.tile a { text-decoration:none; color:#333; }
-.tile a:hover { color:#0066cc; }
+header img.logo { height: 44px; width: auto; border-radius: 6px; background: #fff; }
+nav a { color: #fff; margin-right: 15px; text-decoration: none; font-size: 14px; }
+.container { display: flex; flex-wrap: wrap; max-width: 1100px; margin: auto; background: #fff; }
+.main { flex: 3; padding: 20px; }
+.sidebar { flex: 1; padding: 20px; background: #fafafa; }
+.img { background: #ddd; display: flex; align-items: center; justify-content: center; margin: 15px 0; }
+.img span { font-size: 12px; color: #555; }
+.hero { height: 300px; background-size: cover; background-position: center; overflow: hidden; }
+.thumb { height: 150px; display: flex; align-items: center; justify-content: center; }
+.ad { height: 400px; display: flex; align-items: center; justify-content: center; background: #fafafa; }
+.sidebar-square { height: 300px; display: flex; align-items: center; justify-content: center; background: #fafafa; }
+.sidebar-tall { height: 450px; display: flex; align-items: center; justify-content: center; background: #fafafa; }
+h1 { font-size: 28px; }
+h2 { font-size: 28px; }
+h3 { font-size: 20px; margin-top: 30px; }
+.meta { color: #777; font-size: 14px; margin-bottom: 10px; }
+.section { margin-top: 30px; }
+.tile { display: flex; gap: 10px; margin-bottom: 15px; }
+.tile .img { width: 120px; height: 80px; flex-shrink: 0; }
+.tile a { text-decoration: none; color: #333; }
+.tile a:hover { color: #0066cc; }
 .clickable-img { cursor: pointer; }
-@media(max-width:768px){
-  .container { flex-direction:column; }
-  .sidebar { order:2; }
-  header .brand { flex-direction:column; align-items: flex-start; gap:10px; }
-  .hero { height:200px; }
-  .ad { height:300px; background-size:contain; }
-  .sidebar-square { height:250px; }
-  .sidebar-tall { height:350px; }
+/* Universal image rules for correct containment */
+img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+@media (max-width: 768px) {
+  .container { flex-direction: column; }
+  .sidebar { order: 2; }
+  header .brand { flex-direction: column; align-items: flex-start; gap: 10px; }
+  .hero { height: 200px; }
+  .ad { height: 300px; }
+  .sidebar-square { height: 250px; }
+  .sidebar-tall { height: 350px; }
   .tile { flex-direction: column; }
   .tile .img { width: 100%; height: 150px; }
 }
@@ -56,12 +63,10 @@ h3 { font-size:20px; margin-top:30px; }
   height: 44px;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
 }
-.sticky-bar::-webkit-scrollbar {
-  display: none; /* Chrome, Safari, Opera */
-}
+.sticky-bar::-webkit-scrollbar { display: none; }
 .sticky-bar a {
   color: #fff;
   text-decoration: none;
@@ -76,10 +81,7 @@ h3 { font-size:20px; margin-top:30px; }
   white-space: nowrap;
   min-width: 140px;
 }
-.sticky-bar a:hover,
-.sticky-bar a:focus {
-  background: #222;
-}
+.sticky-bar a:hover, .sticky-bar a:focus { background: #222; }
 @media (max-width: 768px) {
   .sticky-bar {
     height: 40px;
@@ -118,12 +120,11 @@ h3 { font-size:20px; margin-top:30px; }
 </header>
 
 <div class="container">
-
   <div class="main">
 
     <!-- Main Content Section -->
-    <div class="krispy_kreme_main.png">
-      <img src="assets/krispy_kreme_main.png" alt="Meta Main" style="width:100%; height:100%; object-fit:cover;"/>
+    <div class="krispy_kreme_main.png img">
+      <img src="assets/krispy_kreme_main.png" alt="Meta Main"/>
     </div>
 
     <h1>Some Krispy Kreme Customers Could Receive Compensation After Data Breach</h1>
@@ -135,7 +136,7 @@ h3 { font-size:20px; margin-top:30px; }
     
     <a href="https://afflat3e3.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=24964&c=918277&a=785710&k=2D8C0EC535610B9967F104DB26DA07BF&l=26064&s1=rollerads">
       <div class="img ad clickable-img">
-        <img src="assets/songmics_hero600X400.png" alt="Songmics Sponsored Banner" style="max-width:100%; max-height:100%; object-fit:contain;"/>
+        <img src="assets/songmics_hero600X400.png" alt="Songmics Sponsored Banner"/>
       </div>
     </a>
     
@@ -151,7 +152,7 @@ h3 { font-size:20px; margin-top:30px; }
     
     <a href="https://afflat3e3.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=27707&c=918277&a=785710&k=71BC62C0843FE9297852B60D57DE7C37&l=29747&s1=rollerads">
       <div class="img ad clickable-img">
-        <img src="assets/survey_authority_banner.png" alt="Survey Authority Sponsored Banner" style="max-width:100%; max-height:100%; object-fit:contain;"/>
+        <img src="assets/survey_authority_banner.png" alt="Survey Authority Sponsored Banner"/>
       </div>
     </a>
 
@@ -168,7 +169,6 @@ h3 { font-size:20px; margin-top:30px; }
     <p>Additional updates could emerge as the court reviews the proposed agreement and administrators finalize timelines for claim processing and potential payments.</p>
 
     <h3>References & Sources</h3>
-
     <ul>
       <li><a href="https://www.classaction.org/" target="_blank">ClassAction.org</a> — Coverage of the Krispy Kreme data breach litigation</li>
       <li><a href="https://topclassactions.com/" target="_blank">Top Class Actions</a> — Settlement reporting</li>
@@ -182,7 +182,7 @@ h3 { font-size:20px; margin-top:30px; }
       <h3>What to Watch Next</h3>
       <div class="tile">
         <div class="img thumb">
-          <img src="assets/thumb_glp1.png" width="120" height="80" alt="Doctor-guided GLP-1 treatment" style="width:100%; height:100%; object-fit:cover;"/>
+          <img src="assets/thumb_glp1.png" alt="Doctor-guided GLP-1 treatment"/>
         </div>
         <div>
           <a href="https://afflat3e1.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=31973&c=918277&a=785710&k=CD76B756B04F28BC9FB76BD0A9972042&l=37560">See if you qualify for doctor-guided GLP-1 treatment</a>
@@ -191,7 +191,7 @@ h3 { font-size:20px; margin-top:30px; }
       </div>
       <div class="tile">
         <div class="img thumb">
-          <img src="assets/thumb_slamdunkloans.png" width="120" height="80" alt="Unexpected expenses before payday" style="width:100%; height:100%; object-fit:cover;"/>
+          <img src="assets/thumb_slamdunkloans.png" alt="Unexpected expenses before payday"/>
         </div>
         <div>
           <a href="https://afflat3e3.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=11384&c=918277&a=785710&k=8E0983D35F61181B39CAAE72359B8FF3&l=11476">What happens when unexpected expenses hit before payday?</a>
@@ -200,7 +200,7 @@ h3 { font-size:20px; margin-top:30px; }
       </div>
       <div class="tile">
         <div class="img thumb">
-          <img src="assets/thumb_RVfamily.png" width="120" height="80" alt="RV rentals for travelers" style="width:100%; height:100%; object-fit:cover;"/>
+          <img src="assets/thumb_RVfamily.png" alt="RV rentals for travelers"/>
         </div>
         <div>
           <a href="https://afflat3e1.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=26764&c=918277&a=785710&k=B0A47A0043F9E73D5DD7095AD797DFFF&l=28517">Why more travelers are choosing RV rentals this season</a>
@@ -214,13 +214,13 @@ h3 { font-size:20px; margin-top:30px; }
   <div class="sidebar">
     <a href="https://afflat3e1.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=31973&c=918277&a=785710&k=CD76B756B04F28BC9FB76BD0A9972042&l=37560">
       <div class="img sidebar-square clickable-img">
-        <img src="assets/trimrx3.png" width="300" height="340" alt="Trimrx" style="width:100%; height:100%; object-fit:cover;"/>
+        <img src="assets/trimrx3.png" alt="Trimrx"/>
       </div>
     </a>
     <h3>Resources People Are Using</h3>
     <div class="tile">
       <div class="img thumb">
-        <img src="assets/thumb_RVezy1.png" width="120" height="80" alt="Road trip smarter short notice" style="width:100%; height:100%; object-fit:cover;"/>
+        <img src="assets/thumb_RVezy1.png" alt="Road trip smarter short notice"/>
       </div>
       <div>
         <a href="https://afflat3e3.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=26764&c=918277&a=785710&k=B0A47A0043F9E73D5DD7095AD797DFFF&l=28517">The smarter way to road trip, even on short notice</a>
@@ -229,7 +229,7 @@ h3 { font-size:20px; margin-top:30px; }
     </div>
     <div class="tile">
       <div class="img thumb">
-        <img src="assets/workfromhome_thumb.png" width="120" height="80" alt="Survey Authority" style="width:100%; height:100%; object-fit:cover;"/>
+        <img src="assets/workfromhome_thumb.png" alt="Survey Authority"/>
       </div>
       <div>
         <a href="https://afflat3e3.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=27707&c=918271&a=785710&k=D362541308756D905D8E50504A89540C&l=29747&s1=rolleradstext_side">Many overlook this path to flexible, home-based income</a>
@@ -238,7 +238,7 @@ h3 { font-size:20px; margin-top:30px; }
     </div>
     <div class="tile">
       <div class="img thumb">
-        <img src="assets/thumb_solargen.png" width="120" height="80" alt="Backup power solutions" style="width:100%; height:100%; object-fit:cover;"/>
+        <img src="assets/thumb_solargen.png" alt="Backup power solutions"/>
       </div>
       <div>
         <a href="https://afflat3e1.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=29714&c=918277&a=785710&k=67D85E22EBE5500FFA56F844E11920FF&l=33376">Backup power solutions more households are turning to now</a>
@@ -247,7 +247,7 @@ h3 { font-size:20px; margin-top:30px; }
     </div>
     <a href="https://afflat3e1.com/trk/lnk/5F5AB643-A7D0-467B-8857-0BF0496650AE/?o=11384&c=918277&a=785710&k=8E0983D35F61181B39CAAE72359B8FF3&l=11476">
       <div class="img sidebar-tall clickable-img">
-        <img src="assets/slamdunkloans_2.png" width="360" height="450" alt="Sidebar Resource Tall" style="width:100%; height:100%; object-fit:cover;"/>
+        <img src="assets/slamdunkloans_2.png" alt="Sidebar Resource Tall"/>
       </div>
     </a>
   </div>
